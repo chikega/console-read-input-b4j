@@ -29,7 +29,9 @@ Sub Start
     Log("Press <q> to exit..")
     Do Until user_input.ToLowerCase = "q"
         user_input = Input("> ")
-       
+	If user_input = "" Then Continue
+	'If user_input.EqualseIgnoreCase("") Then Continue ' alternate syntax
+	
         If user_input.EqualsIgnoreCase("hack") Then
             Log("root@kali$ Hacking your B4X forum password. Please wait...")
             Sleep(2000)
